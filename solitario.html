@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitario VIU</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- CSS del juego -->
+    <link rel="stylesheet" href="css/solitario.css">
+</head>
+<body>
+    <div class="central">
+        <!-- Título principal -->
+        <h1 id="titulo">Solitario VIU</h1>
+        <img id="logo" src="imagenes/logoVIU.png" alt="Logo VIU" class="logo">
+
+        <!-- Marcadores de tiempo y movimientos -->
+        <h2 id="marcadores">
+            <span>Tiempo: <span id="contador_tiempo">00:00:00</span></span>
+            <span style="display:inline-block; width:200px"></span>
+            <span>Movimientos: <span id="contador_movimientos">0</span></span>
+        </h2>
+
+        <!-- La "mesa" contendrá los 6 tapetes -->
+        <div id="mesa">
+            <div class="tapetes_superiores">
+                <div id="inicial" class="tapete">
+                    Tapete Inicial
+                    <span id="contador_inicial" class="contador">0</span>
+                </div><!--
+                -->
+                <div id="sobrantes" class="tapete">
+                    Tapete Sobrantes
+                    <span id="contador_sobrantes" class="contador">0</span>
+                </div>
+            </div>
+            <div id="receptor1" class="tapete receptor">
+                Receptor 1
+                <span id="contador_receptor1" class="contador">0</span>
+            </div><!--
+            -->
+            <div id="receptor2" class="tapete receptor">
+                Receptor 2
+                <span id="contador_receptor2" class="contador">0</span>
+            </div><!--
+            -->
+            <div id="receptor3" class="tapete receptor">
+                Receptor 3
+                <span id="contador_receptor3" class="contador">0</span>
+            </div><!--
+            -->
+            <div id="receptor4" class="tapete receptor">
+                Receptor 4
+                <span id="contador_receptor4" class="contador">0</span>
+            </div>
+        </div>
+
+        <!-- Botón de reset que reinicia todo -->
+        <button id="reset" class="btn btn-danger">Reiniciar</button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript del juego -->
+    <script src="js/solitario.js" defer></script>
+
+</body>
+</html>

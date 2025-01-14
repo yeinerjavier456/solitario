@@ -1,0 +1,90 @@
+/* Especificaciones CSS para el juego del solitario */
+
+/* Todos los contadores estarán ubicados en la parte inferior 
+   derecha (position absolute) de los respectivos tapetes (position relative). */
+   .contador {
+	position: absolute;
+	bottom: 0px;
+	right: 3px;
+}
+
+/* Estilo del logo */
+#logo {
+	width: 150px;
+	
+}
+
+/* Centrado del título y color */
+h1#titulo {
+	text-align: center;
+	color: hsla(var(--primary-500), 1);
+}
+
+/* Centrado de los marcadores de tiempo y movimientos */
+h2#marcadores { 
+	text-align: center; 
+	color: hsla(var(--primary-500), 1);
+}
+
+/* Mesa que contiene a los tapetes centrados */
+div#mesa {
+	text-align: center;
+	margin: 20px;
+}
+
+/* Todos los tapetes con position relative para que
+   los respectivos mazos (arrays de <img>) puedan
+   posicionarse de manera absoluta respecto a ellos */
+div.tapete {
+	display: inline-block;
+	position: relative;
+	margin: 10px;
+	border: 2px solid hsla(var(--primary-500), 1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dimensiones y color de fondo para el tapete inicial */
+div.tapete#inicial {
+	width: 340px;
+	height: 340px;
+	background-color: #f4f4f4;
+}
+
+/* Dimensiones para todos los tapetes salvo el inicial */
+div.tapete:not(#inicial) { 
+	height: 125px;
+	width: 100px;
+}
+
+/* Color de fondo para el tapete de las cartas sobrantes */
+div.tapete#sobrantes {
+	background-color: hsla(200, 70%, 80%, 1);
+}
+
+/* Color de fondo de los tapetes receptores */
+div.tapete.receptor {
+	background-color: hsla(120, 70%, 80%, 1);
+}
+
+/* Botón de reset */
+#reset {
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 1em;
+	background-color: hsla(var(--primary-500), 1);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#reset:hover {
+	background-color: #e65014;
+}
+
+
+/* Estilo para las cartas */
+img {
+    width: 80px; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
